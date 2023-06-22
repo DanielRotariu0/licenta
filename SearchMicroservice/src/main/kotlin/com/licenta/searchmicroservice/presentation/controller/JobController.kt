@@ -18,7 +18,7 @@ class JobController {
     private lateinit var jobFilterService: IFilterService
 
     @GetMapping
-    fun getNewsfeed(
+    fun getFilteredJobs(
         @RequestParam(defaultValue = "true") cached: Boolean,
         @RequestParam(defaultValue = "") title: List<String>,
         @RequestParam(defaultValue = "") cityId: List<Int>,

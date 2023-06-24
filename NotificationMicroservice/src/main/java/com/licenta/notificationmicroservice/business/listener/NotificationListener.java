@@ -24,7 +24,6 @@ public class NotificationListener {
     public void listen(NotificationDTO notificationDTO) {
         notificationDTO.setIsRead(false);
         NotificationDTO returnedNotification = notificationService.save(notificationDTO);
-        returnedNotification.setMessage(notificationDTO.getMessage());
 
         simpMessagingTemplate.convertAndSendToUser(
                 String.valueOf(notificationDTO.getUserId()),

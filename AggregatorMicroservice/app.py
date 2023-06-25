@@ -450,7 +450,7 @@ def job_applications_proxy(user, path):
 @app.route("/filter-api/<path:path>", methods=["GET"])
 @login_required
 def filter_proxy(_, path):
-    return forward_request(SEARCH_MICROSERVICE_API_URL, path, request)
+    return forward_request(FILTER_MICROSERVICE_API_URL, path, request)
 
 
 @app.route("/newsfeed-api/<path:path>", methods=["GET"])

@@ -4,7 +4,7 @@ COPY target/NewsfeedMicroservice-0.0.1-SNAPSHOT.jar app.jar
 
 ENV DATABASE_MICROSERVICE_HOST database-microservice
 ENV DATABASE_MICROSERVICE_PORT 23050
-ENV FILTER_MICROSERVICE_HOST search-microservice
+ENV FILTER_MICROSERVICE_HOST filter-microservice
 ENV FILTER_MICROSERVICE_PORT 23051
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
